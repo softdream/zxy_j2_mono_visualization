@@ -1,0 +1,8 @@
+prefix=/home/riki/AdasWork/catkin_ws/install
+
+Name: j2_mono
+Description: Description of j2_mono
+Version: 0.0.0
+Cflags: -I/home/riki/AdasWork/catkin_ws/install/include
+Libs: -L/home/riki/AdasWork/catkin_ws/install/lib 
+Requires: roscpp std_msgs message_runtime sensor_msgs image_transport cv_bridge
