@@ -67,8 +67,8 @@ void publishObstaclesMarker( std::vector<j2_mono::Obstacle> &obstacle_array, vis
 		box_marker.pose.orientation.z = q.z;		
 		box_marker.pose.orientation.w = q.w;
 	
-		box_marker.scale.x = it->world_info.width;
-		box_marker.scale.y = it->world_info.length;
+		box_marker.scale.x = it->world_info.length;
+		box_marker.scale.y = it->world_info.width;
 		box_marker.scale.z = it->world_info.height;
 		
 		marker_array.markers.push_back( box_marker );
@@ -150,7 +150,8 @@ void publishLinesMarker( std::vector<j2_mono::Line> &line_array, visualization_m
 			std::vector<float> coeffs = it->coeffs;
 			float y = travelThePointsOnTheLine( x, coeffs );
 			line_list.id = it->id;
-			line_list.lifetime = ros::Duration( it->life_time );
+			//line_list.lifetime = ros::Duration( it->life_time );
+			line_list.lifetime = ros::Duration( 0.1 );
 			line_list.pose.orientation.w = 1.0f;
 			
 			geometry_msgs::Point p;
@@ -197,7 +198,7 @@ int main(int argc,char** argv)
 
 	ros::Subscriber sub = n.subscribe<j2_mono::Meta>( "/Meta/SourceData", 1, MetaCallback );	
 
-	marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker",1);
+	marker_pub = n.advertise<visualization_msgs::MarkerArray>("visualization_marker",1);
 	ros::spin();
 
 	return 0;

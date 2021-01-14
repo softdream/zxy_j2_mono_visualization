@@ -300,7 +300,9 @@ void * ThreadProcess() {
         cv::Mat channels = g_parsinginfo[0].GetParsingMatByNames(label, { "Road" , "Car", "LaneMarking", "Truck"});
         cv::Mat lane = g_parsinginfo[1].GetParsingMat(label);
 
-        // TODO
+	sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", full).toImageMsg();
+	image_pub.publish( msg ); 
+       // TODO
         // resize and undistortion as your needs
 #endif
       }

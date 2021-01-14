@@ -1,0 +1,8 @@
+prefix=/home/riki/AdasWork/catkin_ws/install
+
+Name: integratedNavigation
+Description: Description of integratedNavigation
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/riki/AdasWork/catkin_ws/install/lib 
+Requires: 

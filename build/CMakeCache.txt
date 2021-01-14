@@ -308,6 +308,12 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 
 //Value Computed by CMake
+integratedNavigation_BINARY_DIR:STATIC=/home/riki/AdasWork/catkin_ws/build/integratedNavigation
+
+//Value Computed by CMake
+integratedNavigation_SOURCE_DIR:STATIC=/home/riki/AdasWork/catkin_ws/src/integratedNavigation
+
+//Value Computed by CMake
 j2_mono_BINARY_DIR:STATIC=/home/riki/AdasWork/catkin_ws/build/j2_mono
 
 //The directory containing a CMake configuration file for j2_mono.
@@ -318,6 +324,12 @@ j2_mono_SOURCE_DIR:STATIC=/home/riki/AdasWork/catkin_ws/src/j2_mono
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/kinetic/lib/libroslib.so
+
+//Value Computed by CMake
+localizationSensor_BINARY_DIR:STATIC=/home/riki/AdasWork/catkin_ws/build/localizationSensor
+
+//Value Computed by CMake
+localizationSensor_SOURCE_DIR:STATIC=/home/riki/AdasWork/catkin_ws/src/localizationSensor
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
@@ -472,7 +484,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
