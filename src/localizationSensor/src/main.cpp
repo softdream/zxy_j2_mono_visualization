@@ -121,6 +121,9 @@ int main( int argc, char **argv )
 		gpsMsg.latitude = localMsg.latitude;
 
 		pub.publish( gpsMsg );
+		
+		// clear the vector
+		elementVector.clear();
 	}
 	
 	return 0;
