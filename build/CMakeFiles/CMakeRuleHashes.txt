@@ -20,6 +20,7 @@ c3c059377df2bc648c0887d8e674abbe /home/riki/AdasWork/catkin_ws/devel/include/j2_
 fba878788bc3e083829b147a1885142b /home/riki/AdasWork/catkin_ws/devel/include/j2_mono/WorldSpaceInfo.h
 fcc9ed2e7b39ae6f96ad367261d856c6 /home/riki/AdasWork/catkin_ws/devel/include/j2_mono/canFrame.h
 f09bcb25595d46c49dbc3e85ffa53c55 /home/riki/AdasWork/catkin_ws/devel/include/j2_mono/odometryFrame.h
+dc5857fa4a80085513059a4d0de90a30 /home/riki/AdasWork/catkin_ws/devel/include/localizationSensor/gps.h
 49c95ac88018bf689cbbea776e969a09 /home/riki/AdasWork/catkin_ws/devel/lib/python2.7/dist-packages/j2_mono/msg/_Box3D.py
 e5d3e021db295cb766d04ba2a6474166 /home/riki/AdasWork/catkin_ws/devel/lib/python2.7/dist-packages/j2_mono/msg/_Data.py
 79cd3ea45856505754da3dbf009c2f81 /home/riki/AdasWork/catkin_ws/devel/lib/python2.7/dist-packages/j2_mono/msg/_FreeSpacePoints.py
@@ -42,6 +43,8 @@ cb15b2598db3fe36de7cbd961051691e /home/riki/AdasWork/catkin_ws/devel/lib/python2
 93c03046d9b59b6b74ccadca7fe9b393 /home/riki/AdasWork/catkin_ws/devel/lib/python2.7/dist-packages/j2_mono/msg/__init__.py
 1b203ddde86033093e941f4052ce6141 /home/riki/AdasWork/catkin_ws/devel/lib/python2.7/dist-packages/j2_mono/msg/_canFrame.py
 23292a008b2b5eecbba9ff69ff6d678e /home/riki/AdasWork/catkin_ws/devel/lib/python2.7/dist-packages/j2_mono/msg/_odometryFrame.py
+93dfe4cfbd5cd27ef09520e2c3ca5b10 /home/riki/AdasWork/catkin_ws/devel/lib/python2.7/dist-packages/localizationSensor/msg/__init__.py
+0f5e64275193c03d1126bdb6c06f42f5 /home/riki/AdasWork/catkin_ws/devel/lib/python2.7/dist-packages/localizationSensor/msg/_gps.py
 5f717d06b4601ccff3607f9da826f381 /home/riki/AdasWork/catkin_ws/devel/share/common-lisp/ros/j2_mono/msg/Box3D.lisp
 6073549f5d0254ec5113fa17500a93bf /home/riki/AdasWork/catkin_ws/devel/share/common-lisp/ros/j2_mono/msg/Data.lisp
 e4d97a50598f6f1e1f4fad6a03f7ccfd /home/riki/AdasWork/catkin_ws/devel/share/common-lisp/ros/j2_mono/msg/FreeSpacePoints.lisp
@@ -63,6 +66,7 @@ c92130110bcc7833ebdce12b605ec7eb /home/riki/AdasWork/catkin_ws/devel/share/commo
 d9b462f7d3cab70fb623705b9d4891e1 /home/riki/AdasWork/catkin_ws/devel/share/common-lisp/ros/j2_mono/msg/WorldSpaceInfo.lisp
 3b6a17a0471fece5e6279eb45f0a889f /home/riki/AdasWork/catkin_ws/devel/share/common-lisp/ros/j2_mono/msg/canFrame.lisp
 72b33fc3b96577108114d2661c76f278 /home/riki/AdasWork/catkin_ws/devel/share/common-lisp/ros/j2_mono/msg/odometryFrame.lisp
+3c3d21f9e48891ccb22cbadc56d6295c /home/riki/AdasWork/catkin_ws/devel/share/common-lisp/ros/localizationSensor/msg/gps.lisp
 53e4e138f4921342014b98ba377e6e02 /home/riki/AdasWork/catkin_ws/devel/share/gennodejs/ros/j2_mono/msg/Box3D.js
 054a6a1558d33915999b1e5b1a67b71a /home/riki/AdasWork/catkin_ws/devel/share/gennodejs/ros/j2_mono/msg/Data.js
 724c77992b04dc22baa71fa57cb8a896 /home/riki/AdasWork/catkin_ws/devel/share/gennodejs/ros/j2_mono/msg/FreeSpacePoints.js
@@ -84,6 +88,7 @@ b4b3199e69d3a212611452c0d530d04e /home/riki/AdasWork/catkin_ws/devel/share/genno
 aeea0085338525a7b3b19f0421c784c0 /home/riki/AdasWork/catkin_ws/devel/share/gennodejs/ros/j2_mono/msg/WorldSpaceInfo.js
 1e63af65763333127309a27f2cd729b5 /home/riki/AdasWork/catkin_ws/devel/share/gennodejs/ros/j2_mono/msg/canFrame.js
 0dbe2a27d417a29f4e46f21d3416aa3b /home/riki/AdasWork/catkin_ws/devel/share/gennodejs/ros/j2_mono/msg/odometryFrame.js
+bcc2c529b61e6dee089d85d29c6ec66a /home/riki/AdasWork/catkin_ws/devel/share/gennodejs/ros/localizationSensor/msg/gps.js
 25ed71989333c6950a8c2ea52b82edc8 /home/riki/AdasWork/catkin_ws/devel/share/roseus/ros/j2_mono/manifest.l
 210fa400f24be9bf0d25681d009d17b0 /home/riki/AdasWork/catkin_ws/devel/share/roseus/ros/j2_mono/msg/Box3D.l
 c6a3a4dd5c556ed68dc073706d326ddf /home/riki/AdasWork/catkin_ws/devel/share/roseus/ros/j2_mono/msg/Data.l
@@ -106,6 +111,8 @@ b6bc18d8f36cd6619425f868e204aa8b /home/riki/AdasWork/catkin_ws/devel/share/roseu
 902cd925af7697430d57985c657bcb16 /home/riki/AdasWork/catkin_ws/devel/share/roseus/ros/j2_mono/msg/WorldSpaceInfo.l
 4626b32a99c87b3c928fb81f3eb624b3 /home/riki/AdasWork/catkin_ws/devel/share/roseus/ros/j2_mono/msg/canFrame.l
 ca252a7b0d360203eb6ef14e4581ba2d /home/riki/AdasWork/catkin_ws/devel/share/roseus/ros/j2_mono/msg/odometryFrame.l
+e8b90f390970031b02d2f75a0053b7df /home/riki/AdasWork/catkin_ws/devel/share/roseus/ros/localizationSensor/manifest.l
+66704b79fbc902ec8cd223b28bbb2a6d /home/riki/AdasWork/catkin_ws/devel/share/roseus/ros/localizationSensor/msg/gps.l
 e38eaa0d06baeb07675f65fd27cf53fd CMakeFiles/clean_test_results
 43b8fcab6f3aaba344cca94d5348397c j2_mono/CMakeFiles/_j2_mono_generate_messages_check_deps_Box3D
 081485f88e439159cc6171c3e3c6c178 j2_mono/CMakeFiles/_j2_mono_generate_messages_check_deps_Data
@@ -133,3 +140,9 @@ a92864082ef7ba0337d19a2357acd3ca j2_mono/CMakeFiles/j2_mono_generate_messages_eu
 a92864082ef7ba0337d19a2357acd3ca j2_mono/CMakeFiles/j2_mono_generate_messages_lisp
 a92864082ef7ba0337d19a2357acd3ca j2_mono/CMakeFiles/j2_mono_generate_messages_nodejs
 a92864082ef7ba0337d19a2357acd3ca j2_mono/CMakeFiles/j2_mono_generate_messages_py
+8df1fad9b7cc52323cca76336ff1a7ec localizationSensor/CMakeFiles/_localizationSensor_generate_messages_check_deps_gps
+35e09d77d06bedd51942bc2cc13fdc1d localizationSensor/CMakeFiles/localizationSensor_generate_messages_cpp
+35e09d77d06bedd51942bc2cc13fdc1d localizationSensor/CMakeFiles/localizationSensor_generate_messages_eus
+35e09d77d06bedd51942bc2cc13fdc1d localizationSensor/CMakeFiles/localizationSensor_generate_messages_lisp
+35e09d77d06bedd51942bc2cc13fdc1d localizationSensor/CMakeFiles/localizationSensor_generate_messages_nodejs
+35e09d77d06bedd51942bc2cc13fdc1d localizationSensor/CMakeFiles/localizationSensor_generate_messages_py

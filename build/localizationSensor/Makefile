@@ -78,6 +78,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -99,17 +110,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -166,6 +166,66 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_genpy.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_genpy.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_genpy.dir/rule
+
+# Convenience name for target.
+localizationSensor_genpy: localizationSensor/CMakeFiles/localizationSensor_genpy.dir/rule
+
+.PHONY : localizationSensor_genpy
+
+# fast build rule for target.
+localizationSensor_genpy/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_genpy.dir/build.make localizationSensor/CMakeFiles/localizationSensor_genpy.dir/build
+.PHONY : localizationSensor_genpy/fast
+
+# Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_generate_messages_py.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_generate_messages_py.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_generate_messages_py.dir/rule
+
+# Convenience name for target.
+localizationSensor_generate_messages_py: localizationSensor/CMakeFiles/localizationSensor_generate_messages_py.dir/rule
+
+.PHONY : localizationSensor_generate_messages_py
+
+# fast build rule for target.
+localizationSensor_generate_messages_py/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_generate_messages_py.dir/build.make localizationSensor/CMakeFiles/localizationSensor_generate_messages_py.dir/build
+.PHONY : localizationSensor_generate_messages_py/fast
+
+# Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_gennodejs.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_gennodejs.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_gennodejs.dir/rule
+
+# Convenience name for target.
+localizationSensor_gennodejs: localizationSensor/CMakeFiles/localizationSensor_gennodejs.dir/rule
+
+.PHONY : localizationSensor_gennodejs
+
+# fast build rule for target.
+localizationSensor_gennodejs/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_gennodejs.dir/build.make localizationSensor/CMakeFiles/localizationSensor_gennodejs.dir/build
+.PHONY : localizationSensor_gennodejs/fast
+
+# Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_generate_messages_lisp.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_generate_messages_lisp.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+localizationSensor_generate_messages_lisp: localizationSensor/CMakeFiles/localizationSensor_generate_messages_lisp.dir/rule
+
+.PHONY : localizationSensor_generate_messages_lisp
+
+# fast build rule for target.
+localizationSensor_generate_messages_lisp/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_generate_messages_lisp.dir/build.make localizationSensor/CMakeFiles/localizationSensor_generate_messages_lisp.dir/build
+.PHONY : localizationSensor_generate_messages_lisp/fast
+
+# Convenience name for target.
 localizationSensor/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : localizationSensor/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -181,6 +241,21 @@ roscpp_generate_messages_py/fast:
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_genlisp.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_genlisp.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_genlisp.dir/rule
+
+# Convenience name for target.
+localizationSensor_genlisp: localizationSensor/CMakeFiles/localizationSensor_genlisp.dir/rule
+
+.PHONY : localizationSensor_genlisp
+
+# fast build rule for target.
+localizationSensor_genlisp/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_genlisp.dir/build.make localizationSensor/CMakeFiles/localizationSensor_genlisp.dir/build
+.PHONY : localizationSensor_genlisp/fast
+
+# Convenience name for target.
 localizationSensor/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
 	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : localizationSensor/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
@@ -194,6 +269,36 @@ rosgraph_msgs_generate_messages_eus: localizationSensor/CMakeFiles/rosgraph_msgs
 rosgraph_msgs_generate_messages_eus/fast:
 	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make localizationSensor/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_node.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_node.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_node.dir/rule
+
+# Convenience name for target.
+localizationSensor_node: localizationSensor/CMakeFiles/localizationSensor_node.dir/rule
+
+.PHONY : localizationSensor_node
+
+# fast build rule for target.
+localizationSensor_node/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_node.dir/build.make localizationSensor/CMakeFiles/localizationSensor_node.dir/build
+.PHONY : localizationSensor_node/fast
+
+# Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_generate_messages_eus.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_generate_messages_eus.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+localizationSensor_generate_messages_eus: localizationSensor/CMakeFiles/localizationSensor_generate_messages_eus.dir/rule
+
+.PHONY : localizationSensor_generate_messages_eus
+
+# fast build rule for target.
+localizationSensor_generate_messages_eus/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_generate_messages_eus.dir/build.make localizationSensor/CMakeFiles/localizationSensor_generate_messages_eus.dir/build
+.PHONY : localizationSensor_generate_messages_eus/fast
 
 # Convenience name for target.
 localizationSensor/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
@@ -271,6 +376,21 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+# Convenience name for target.
+_catkin_empty_exported_target: localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+.PHONY : _catkin_empty_exported_target
+
+# fast build rule for target.
+_catkin_empty_exported_target/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/build.make localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
+
+# Convenience name for target.
 localizationSensor/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : localizationSensor/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
@@ -316,6 +436,21 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_generate_messages_cpp.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_generate_messages_cpp.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+localizationSensor_generate_messages_cpp: localizationSensor/CMakeFiles/localizationSensor_generate_messages_cpp.dir/rule
+
+.PHONY : localizationSensor_generate_messages_cpp
+
+# fast build rule for target.
+localizationSensor_generate_messages_cpp/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_generate_messages_cpp.dir/build.make localizationSensor/CMakeFiles/localizationSensor_generate_messages_cpp.dir/build
+.PHONY : localizationSensor_generate_messages_cpp/fast
+
+# Convenience name for target.
 localizationSensor/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
 	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : localizationSensor/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
@@ -344,6 +479,21 @@ std_msgs_generate_messages_py: localizationSensor/CMakeFiles/std_msgs_generate_m
 std_msgs_generate_messages_py/fast:
 	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/std_msgs_generate_messages_py.dir/build.make localizationSensor/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_generate_messages.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_generate_messages.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_generate_messages.dir/rule
+
+# Convenience name for target.
+localizationSensor_generate_messages: localizationSensor/CMakeFiles/localizationSensor_generate_messages.dir/rule
+
+.PHONY : localizationSensor_generate_messages
+
+# fast build rule for target.
+localizationSensor_generate_messages/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_generate_messages.dir/build.make localizationSensor/CMakeFiles/localizationSensor_generate_messages.dir/build
+.PHONY : localizationSensor_generate_messages/fast
 
 # Convenience name for target.
 localizationSensor/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
@@ -391,34 +541,64 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-localizationSensor/CMakeFiles/localizationSensor_node.dir/rule:
-	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_node.dir/rule
-.PHONY : localizationSensor/CMakeFiles/localizationSensor_node.dir/rule
+localizationSensor/CMakeFiles/_localizationSensor_generate_messages_check_deps_gps.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/_localizationSensor_generate_messages_check_deps_gps.dir/rule
+.PHONY : localizationSensor/CMakeFiles/_localizationSensor_generate_messages_check_deps_gps.dir/rule
 
 # Convenience name for target.
-localizationSensor_node: localizationSensor/CMakeFiles/localizationSensor_node.dir/rule
+_localizationSensor_generate_messages_check_deps_gps: localizationSensor/CMakeFiles/_localizationSensor_generate_messages_check_deps_gps.dir/rule
 
-.PHONY : localizationSensor_node
+.PHONY : _localizationSensor_generate_messages_check_deps_gps
 
 # fast build rule for target.
-localizationSensor_node/fast:
-	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_node.dir/build.make localizationSensor/CMakeFiles/localizationSensor_node.dir/build
-.PHONY : localizationSensor_node/fast
+_localizationSensor_generate_messages_check_deps_gps/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/_localizationSensor_generate_messages_check_deps_gps.dir/build.make localizationSensor/CMakeFiles/_localizationSensor_generate_messages_check_deps_gps.dir/build
+.PHONY : _localizationSensor_generate_messages_check_deps_gps/fast
 
 # Convenience name for target.
-localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/rule
+localizationSensor/CMakeFiles/localizationSensor_generate_messages_nodejs.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_generate_messages_nodejs.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/rule
+localizationSensor_generate_messages_nodejs: localizationSensor/CMakeFiles/localizationSensor_generate_messages_nodejs.dir/rule
 
-.PHONY : _catkin_empty_exported_target
+.PHONY : localizationSensor_generate_messages_nodejs
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/build.make localizationSensor/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+localizationSensor_generate_messages_nodejs/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_generate_messages_nodejs.dir/build.make localizationSensor/CMakeFiles/localizationSensor_generate_messages_nodejs.dir/build
+.PHONY : localizationSensor_generate_messages_nodejs/fast
+
+# Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_gencpp.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_gencpp.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_gencpp.dir/rule
+
+# Convenience name for target.
+localizationSensor_gencpp: localizationSensor/CMakeFiles/localizationSensor_gencpp.dir/rule
+
+.PHONY : localizationSensor_gencpp
+
+# fast build rule for target.
+localizationSensor_gencpp/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_gencpp.dir/build.make localizationSensor/CMakeFiles/localizationSensor_gencpp.dir/build
+.PHONY : localizationSensor_gencpp/fast
+
+# Convenience name for target.
+localizationSensor/CMakeFiles/localizationSensor_geneus.dir/rule:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 localizationSensor/CMakeFiles/localizationSensor_geneus.dir/rule
+.PHONY : localizationSensor/CMakeFiles/localizationSensor_geneus.dir/rule
+
+# Convenience name for target.
+localizationSensor_geneus: localizationSensor/CMakeFiles/localizationSensor_geneus.dir/rule
+
+.PHONY : localizationSensor_geneus
+
+# fast build rule for target.
+localizationSensor_geneus/fast:
+	cd /home/riki/AdasWork/catkin_ws/build && $(MAKE) -f localizationSensor/CMakeFiles/localizationSensor_geneus.dir/build.make localizationSensor/CMakeFiles/localizationSensor_geneus.dir/build
+.PHONY : localizationSensor_geneus/fast
 
 src/dataRecv.o: src/dataRecv.cpp.o
 
@@ -482,28 +662,40 @@ help:
 	@echo "... depend"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... edit_cache"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... test"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... install/strip"
+	@echo "... localizationSensor_genpy"
+	@echo "... localizationSensor_generate_messages_py"
+	@echo "... localizationSensor_gennodejs"
+	@echo "... localizationSensor_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... localizationSensor_genlisp"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... localizationSensor_node"
+	@echo "... localizationSensor_generate_messages_eus"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... install/local"
+	@echo "... _catkin_empty_exported_target"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... localizationSensor_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... localizationSensor_generate_messages"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... localizationSensor_node"
-	@echo "... install/strip"
-	@echo "... _catkin_empty_exported_target"
-	@echo "... install/local"
+	@echo "... _localizationSensor_generate_messages_check_deps_gps"
+	@echo "... localizationSensor_generate_messages_nodejs"
+	@echo "... localizationSensor_gencpp"
+	@echo "... localizationSensor_geneus"
 	@echo "... src/dataRecv.o"
 	@echo "... src/dataRecv.i"
 	@echo "... src/dataRecv.s"

@@ -18,6 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/riki/AdasWork/catkin_ws/devel/include"
   "/opt/ros/kinetic/include"
   "/usr/local/include"
   "/home/riki/AdasWork/catkin_ws/src/localizationSensor/include"

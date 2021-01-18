@@ -50,6 +50,12 @@ void DataRecv::reconnect()
 
 void DataRecv::recvString()
 {
+	int recv_to = 50;   // 500 ms;
+  	zmq_setsockopt(m_requester, ZMQ_RCVTIMEO, &recv_to, sizeof(int));
+  	if(recv_fail_count > 5000 / recv_to){
+    		std::cout<< __LINE__ << "Reconnect to "<< m_endpoint << std::endl;
+  	}
+	
 	zmq_msg_init( &m_recv_msg );
 		
 	int size = zmq_msg_recv( &m_recv_msg, m_requester, 0 );
@@ -57,6 +63,11 @@ void DataRecv::recvString()
 		std::cerr<<"Receive Error: "<<size<<std::endl;
 		assert( size < 0 );
 	}
+	/*if ( size == -1 ) {
+      		recv_fail_count++;
+      		return 0;
+    	}
+    	recv_fail_count = 0;*/
 	
 	char *str = new char[ size + 1 ];
 	memcpy( str, zmq_msg_data( &m_recv_msg ), size );
@@ -65,14 +76,23 @@ void DataRecv::recvString()
 
 	str[size] = 0;
 	
+	data = str;	
+
 	delete[] str;
 
-	data = str;
+	//data = str;
 }
 
+void DataRecv::setEndPoint( const std::string endPoint )
+{
+	memset( m_endpoint, 0, sizeof( m_endpoint ) );
+	strcpy( m_endpoint, endPoint.c_str() );
+}
 
-
-
+std::string DataRecv::getData() 
+{
+	return data;
+}
 
 
 

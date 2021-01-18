@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/riki/AdasWork/catkin_ws/devel/include/localizationSensor/gps.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/riki/AdasWork/catkin_ws/src/localizationSensor/include/zeromq/zmq.h
 errno.h
 -
@@ -45,6 +61,10 @@ iostream
 -
 dataRecv.h
 /home/riki/AdasWork/catkin_ws/src/localizationSensor/src/dataRecv.h
+localizationSensor/gps.h
+-
+vector
+-
 
 /opt/ros/kinetic/include/XmlRpcDecl.h
 ros/macros.h
@@ -268,6 +288,10 @@ boost/make_shared.hpp
 cstddef
 -
 memory
+-
+
+/opt/ros/kinetic/include/ros/message_operations.h
+ostream
 -
 
 /opt/ros/kinetic/include/ros/message_traits.h

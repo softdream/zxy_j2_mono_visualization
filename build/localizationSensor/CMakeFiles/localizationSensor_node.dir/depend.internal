@@ -6,6 +6,7 @@ localizationSensor/CMakeFiles/localizationSensor_node.dir/src/dataRecv.cpp.o
  /home/riki/AdasWork/catkin_ws/src/localizationSensor/src/dataRecv.cpp
  /home/riki/AdasWork/catkin_ws/src/localizationSensor/src/dataRecv.h
 localizationSensor/CMakeFiles/localizationSensor_node.dir/src/main.cpp.o
+ /home/riki/AdasWork/catkin_ws/devel/include/localizationSensor/gps.h
  /home/riki/AdasWork/catkin_ws/src/localizationSensor/include/zeromq/zmq.h
  /home/riki/AdasWork/catkin_ws/src/localizationSensor/src/dataRecv.h
  /home/riki/AdasWork/catkin_ws/src/localizationSensor/src/main.cpp
@@ -29,6 +30,7 @@ localizationSensor/CMakeFiles/localizationSensor_node.dir/src/main.cpp.o
  /opt/ros/kinetic/include/ros/message.h
  /opt/ros/kinetic/include/ros/message_event.h
  /opt/ros/kinetic/include/ros/message_forward.h
+ /opt/ros/kinetic/include/ros/message_operations.h
  /opt/ros/kinetic/include/ros/message_traits.h
  /opt/ros/kinetic/include/ros/names.h
  /opt/ros/kinetic/include/ros/node_handle.h

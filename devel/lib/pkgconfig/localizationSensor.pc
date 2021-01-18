@@ -3,6 +3,6 @@ prefix=/home/riki/AdasWork/catkin_ws/devel
 Name: localizationSensor
 Description: Description of localizationSensor
 Version: 0.0.0
-Cflags: -I/home/riki/AdasWork/catkin_ws/src/localizationSensor/include
+Cflags: -I/home/riki/AdasWork/catkin_ws/devel/include -I/home/riki/AdasWork/catkin_ws/src/localizationSensor/include
 Libs: -L/home/riki/AdasWork/catkin_ws/devel/lib -llocalizationSensor
-Requires: message_generation roscpp std_msgs
+Requires: message_runtime roscpp std_msgs

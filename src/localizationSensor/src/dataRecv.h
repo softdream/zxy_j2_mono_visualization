@@ -11,6 +11,10 @@ public:
 	DataRecv();
 	~DataRecv();
 
+	void setEndPoint( const std::string endPoint  );
+	
+	std::string getData();
+	
 	void init();
 	void reconnect();
 	

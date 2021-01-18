@@ -5,4 +5,4 @@ Description: Description of localizationSensor
 Version: 0.0.0
 Cflags: -I/home/riki/AdasWork/catkin_ws/install/include
 Libs: -L/home/riki/AdasWork/catkin_ws/install/lib -llocalizationSensor
-Requires: message_generation roscpp std_msgs
+Requires: message_runtime roscpp std_msgs

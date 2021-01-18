@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(localizationSensor_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/riki/AdasWork/catkin_ws/src/localizationSensor/include " STREQUAL " ")
+if(NOT "/home/riki/AdasWork/catkin_ws/devel/include;/home/riki/AdasWork/catkin_ws/src/localizationSensor/include " STREQUAL " ")
   set(localizationSensor_INCLUDE_DIRS "")
-  set(_include_dirs "/home/riki/AdasWork/catkin_ws/src/localizationSensor/include")
+  set(_include_dirs "/home/riki/AdasWork/catkin_ws/devel/include;/home/riki/AdasWork/catkin_ws/src/localizationSensor/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(localizationSensor_EXPORTED_TARGETS "")
+set(localizationSensor_EXPORTED_TARGETS "localizationSensor_generate_messages_cpp;localizationSensor_generate_messages_eus;localizationSensor_generate_messages_lisp;localizationSensor_generate_messages_nodejs;localizationSensor_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${localizationSensor_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -153,7 +153,7 @@ foreach(t ${localizationSensor_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "message_generation;roscpp;std_msgs")
+set(depends "message_runtime;roscpp;std_msgs")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND localizationSensor_EXPORTED_TARGETS ${${localizationSensor_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "localizationSensor-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${localizationSensor_DIR}/${extra})
